@@ -99,8 +99,8 @@ pipeline {
             steps {
 	        echo 'Saving Results process..'
                 sh '''
-		    report_file="${WORKSPACE}/Results/report"
-		    mkdir -p ${WORKSPACE}/Results
+		    report_file="${HOME}/Documents/Deployment/report"
+		    mkdir -p ${HOME}/Documents/Deployment/
 		    if [ -f "${report_file}" ]; then
                         echo "file ${report_file} exists"
                     else
@@ -109,7 +109,7 @@ pipeline {
                     echo "Build Number: $BUILD_NUMBER" >> ${report_file}
                     cat ${WORKSPACE}/results >> ${report_file}
 	            echo "#############################" >> ${report_file}
-                    printenv > ${WORKSPACE}/Results/env_log.txt
+                    printenv > ${HOME}/Documents/Deployment/env_log.txt
                 '''
             }
         }
