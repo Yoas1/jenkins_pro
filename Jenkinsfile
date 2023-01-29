@@ -88,8 +88,8 @@ pipeline {
                 echo "Run ${params.Languages} language"
                 sh '''
 		    echo "your choice: Python" > results
-		    python lang_py.py
-		    python lang_py.py $PARAM >> results
+		    python3 lang_py.py
+		    python3 lang_py.py $PARAM >> results
 		'''
             }        
         }
