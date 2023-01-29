@@ -3,8 +3,8 @@
 properties([parameters([choice(choices: 'All\nBash\nC\nPython', description: 'Select Languages to build', name: 'Languages')])])
 
 pipeline {
-    agent any
-    // agent { node { label 'slave01' } }
+    //agent any
+     agent { node { label 'linux' } }
     stages {
     
         // Clone Sources from GitHub.
