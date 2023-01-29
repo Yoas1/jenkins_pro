@@ -55,9 +55,6 @@ pipeline {
             steps {
                 echo "Run ${params.Languages} language"
                 sh '''
-		    //echo "your choice: Bash" > results
-		    //bash lang_bash.sh
-		    //bash lang_bash.sh $PARAM >> results
 		    echo "your choice: sh" > results
 		    ./lang_bash.sh
 		    ./lang_bash.sh $PARAM >> results
