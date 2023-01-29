@@ -38,8 +38,8 @@ pipeline {
 		    echo "your choice: All" > results
 		    python3 lang_py.py
 		    python3 lang_py.py $PARAM >> results
-		    bash lang_bash.sh
-		    bash lang_bash.sh $PARAM >> results
+		    sh lang_bash.sh
+		    sh lang_bash.sh $PARAM >> results
                     ./lang_c
 		    ./lang_c $PARAM >> results
                 ''' 
