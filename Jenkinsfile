@@ -4,7 +4,7 @@ properties([parameters([choice(choices: 'All\nBash\nC\nPython', description: 'Se
 
 pipeline {
     //agent any
-     agent { node { label 'linux' } }
+     agent { node { label 'ssh-agent' } }
     stages {
     
         // Clone Sources from GitHub.
